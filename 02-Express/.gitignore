@@ -1,0 +1,4 @@
+# Ignore files and directories
+
+/node_modules
+/0-Notes
