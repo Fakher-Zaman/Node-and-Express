@@ -1,18 +1,18 @@
 {
-  "name": "01-node",
+  "name": "node",
   "version": "1.0.0",
-  "description": "",
   "main": "01-intro.js",
   "scripts": {
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "fakher zaman",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
   "dependencies": {
     "lodash": "^4.17.21"
-  }
+  },
+  "description": ""
 }
