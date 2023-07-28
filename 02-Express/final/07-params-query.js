@@ -27,6 +27,11 @@ app.get('/api/products/:productID', (req, res) => {
     res.json(singleProduct);
 });
 
+app.get('/api/products/:productID/reviews/:reviewID', (req, res) => {
+    console.log(req.params);
+    res.send('hello world');
+});
+
 app.get('/api/people', (req, res) => {
     res.json(people);
 });
