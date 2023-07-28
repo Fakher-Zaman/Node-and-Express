@@ -52,8 +52,8 @@ app.get('/api/v1/query', (req, res) => {
         return res.status(200).json({ success: true, data: [] });
     }
 
-    res.status(200).json(sortedProducts);
-    res.send('hello world');
+    return res.status(200).json(sortedProducts);
+    // res.send('hello world');
 });
 
 app.get('/api/people', (req, res) => {
