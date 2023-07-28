@@ -14,6 +14,19 @@ app.get('/api/products', (req, res) => {
     res.json(newProducts);
 });
 
+app.get('/api/products/:productID', (req, res) => {
+    // console.log(req);
+    // console.log(req.params);
+    const { productID } = req.params;
+
+    const singleProduct = products.find((product) => product.id === Number(productID));
+    // console.log(singleProduct);
+    if (!singleProduct) {
+        return res.status(404).send('Product Does Not Exist');
+    }
+    res.json(singleProduct);
+});
+
 app.get('/api/people', (req, res) => {
     res.json(people);
 });
