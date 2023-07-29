@@ -1,10 +1,18 @@
 const express = require('express');
 const app = express();
+const morgan = require('morgan');
 const logger = require('../logger');
 const authorize = require('../authorize');
 
 // req => middleware => res
-app.use(authorize);
+
+// 1. use v/s route
+// 2. options - our own / express / third party
+
+// app.use([logger, authorize]);
+// app.use(express.static('../public'));
+
+app.use(morgan('tiny'));
 
 app.get('/', (req, res) => {
     res.send('Home');
