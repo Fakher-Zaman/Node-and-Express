@@ -36,6 +36,15 @@ app.post('/api/people', (req, res) => {
     res.status(201).json({ success: true, person: name });
 });
 
+// POSTMAN - POST (JSON Example)
+app.post('/api/postman/people', (req, res) => {
+    const { name } = req.body;
+    if (!name) {
+        return res.status(400).json({ success: false, msg: 'Please Provide Name Value' });
+    }
+    res.status(201).json({ success: true, data: [...people, name] });
+});
+
 const port = 5000;
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
