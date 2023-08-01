@@ -1,0 +1,37 @@
+=> Task Manager API:
+Intro 00:00
+Setup 02:57
+Basic Express Server 06:12
+General Routes 09:54
+Route Structure And Details 11:51
+GetAllTasks 15:04
+All Routes 23:11
+Postman Setup 26:44
+REST 36:01
+MongoDB Intro 40:00
+Atlas Setup 41:44
+Connection String 44:30
+MongoDB Overview 47:47
+CRUD - GUI Example 52:11
+Mongoose Info 54:38
+Connect To DB 56:23
+Refactor Connect 1:02:54
+ENV VARS 1:07:59
+First Schema And Model 1:12:54
+Create Task 1:17:36
+Schema Info 1:23:12
+Basic Validation 1:25:27
+TRY/CATCH Block 1:34:21
+GetAllTasks Controller 1:38:22
+Get Single Task 1:44:37
+Two Errors 1:53:02
+Delete Task 1:55:02
+Update Task 2:02:37
+Add FRONT-END 2:11:33
+PUT VS PATCH 2:16:41
+Response Types 2:23:29
+Not Found 2:28:51
+Async Wrapper 2:33:04
+Custom Error Handler 2:43:01
+Custom Error Class 2:48:58
+PORT Variable 3:00:48
