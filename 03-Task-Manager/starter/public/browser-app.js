@@ -3,6 +3,7 @@ const loadingDOM = document.querySelector('.loading-text');
 const formDOM = document.querySelector('.task-form');
 const taskInputDOM = document.querySelector('.task-input');
 const formAlertDOM = document.querySelector('.form-alert');
+
 // Load tasks from /api/tasks
 const showTasks = async () => {
   loadingDOM.style.visibility = 'visible';
@@ -19,21 +20,18 @@ const showTasks = async () => {
       .map((task) => {
         const { completed, _id: taskID, name } = task;
         return `<div class="single-task ${completed && 'task-completed'}">
-<h5><span><i class="far fa-check-circle"></i></span>${name}</h5>
-<div class="task-links">
-
-
-
-<!-- edit link -->
-<a href="task.html?id=${taskID}"  class="edit-link">
-<i class="fas fa-edit"></i>
-</a>
-<!-- delete btn -->
-<button type="button" class="delete-btn" data-id="${taskID}">
-<i class="fas fa-trash"></i>
-</button>
-</div>
-</div>`
+          <h5><span><i class="far fa-check-circle"></i></span>${name}</h5>
+            <div class="task-links">
+              <!-- edit link -->
+              <a href="task.html?id=${taskID}"  class="edit-link">
+                <i class="fas fa-edit"></i>
+              </a>
+              <!-- delete btn -->
+              <button type="button" class="delete-btn" data-id="${taskID}">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>`
       })
       .join('');
     tasksDOM.innerHTML = allTasks;
@@ -47,7 +45,6 @@ const showTasks = async () => {
 showTasks();
 
 // delete task /api/tasks/:id
-
 tasksDOM.addEventListener('click', async (e) => {
   const el = e.target;
   if (el.parentElement.classList.contains('delete-btn')) {
@@ -64,7 +61,6 @@ tasksDOM.addEventListener('click', async (e) => {
 });
 
 // form
-
 formDOM.addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = taskInputDOM.value;
