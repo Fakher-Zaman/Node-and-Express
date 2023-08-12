@@ -21,7 +21,7 @@ app.use(errorHandler);
 // app.patch('api/v1/task/:id');       // - update a task
 // app.delete('api/v1/task/:id');      // - delete a task
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const start = async () => {
     try {
