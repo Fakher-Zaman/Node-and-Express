@@ -9,6 +9,7 @@ const showTasks = async () => {
   loadingDOM.style.visibility = 'visible';
   try {
     const {
+      // data: { data: { tasks } },
       data: { tasks },
     } = await axios.get('/api/v1/tasks');
     if (tasks.length < 1) {
