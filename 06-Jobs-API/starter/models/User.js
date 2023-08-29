@@ -17,12 +17,11 @@ const userSchema = new mongoose.Schema({
         unique: true,
         lowercase: true,
     },
-    Password: {
+    password: {
         type: String,
         required: [true, 'Please enter a password'],
-        minlength: 8,
-        maxlength: 20,
+        minlength: 5,
     },
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('users', userSchema);
